@@ -52,10 +52,10 @@ def mergesort(arr):
     if len(arr) < 2:
         return arr
 
-    middle = len(arr)/2
+    middle = len(arr)//2
     left = mergesort(arr[:middle])
     right = mergesort(arr[middle:])
-    #print("Going to merge: ", merge(left, right))
+    print("Going to merge: ", merge(left, right))
     return merge(left, right)
 
 def testStation(arr):
@@ -70,7 +70,7 @@ def main():
     arr = []
     left = []
     right = []
-    for i in range(0,100000):
+    for i in range(0,10):
         arr.append(i)
     random.shuffle(arr)
     testStation(arr)
